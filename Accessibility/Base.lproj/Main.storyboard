@@ -740,7 +740,7 @@
         <scene sceneID="Hfp-yZ-eTm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jhy-mN-Zod" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New Review" id="Avv-dD-ioW"/>
+                    <tabBarItem key="tabBarItem" title="New Review" image="NewReview" id="Avv-dD-ioW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="iPQ-Ar-sTL">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -759,7 +759,7 @@
         <scene sceneID="aN1-NR-j3F">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LPA-0c-kAa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shared Cases" id="tK4-ed-d3l"/>
+                    <tabBarItem key="tabBarItem" title="Shared Cases" image="SharedCases" id="tK4-ed-d3l"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="Ut0-j9-mED">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -778,7 +778,7 @@
         <scene sceneID="mgT-qS-1Hx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yg1-nW-o9d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Cases" id="iMi-Xo-TRG"/>
+                    <tabBarItem key="tabBarItem" title="My Cases" image="MyCases" id="iMi-Xo-TRG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="d4b-UT-sf3">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -794,5 +794,10 @@
             <point key="canvasLocation" x="928.79999999999995" y="1114.992503748126"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MyCases" width="25" height="25"/>
+        <image name="NewReview" width="25" height="25"/>
+        <image name="SharedCases" width="25" height="25"/>
+    </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -7,4 +7,5 @@ target 'Accessibility' do
 
   # Pods for Accessibility
   pod 'Firebase/Core'
+
 end
