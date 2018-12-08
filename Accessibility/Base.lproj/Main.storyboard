@@ -1,24 +1,798 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T8Y-uy-Pxg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Shared Cases-->
+        <scene sceneID="X9y-fW-5Hz">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="z3E-hs-6se" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ytm-B3-9df">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="DIh-Ls-eRa"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Shared Cases" id="5rv-Dd-p7d"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uax-YE-dMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1868" y="440.32983508245883"/>
+        </scene>
+        <!--New Review-->
+        <scene sceneID="Ols-8N-WhL">
+            <objects>
+                <viewController id="M0J-nL-zab" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kl7-ok-lHH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi1-jq-IdQ">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <connections>
+                                    <segue destination="FJU-e5-EUZ" kind="embed" id="ATm-VW-gjg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bi1-jq-IdQ" firstAttribute="trailing" secondItem="PLl-cJ-9cT" secondAttribute="trailing" id="3xg-XL-GOV"/>
+                            <constraint firstItem="Bi1-jq-IdQ" firstAttribute="leading" secondItem="PLl-cJ-9cT" secondAttribute="leading" id="8d0-fm-cpA"/>
+                            <constraint firstItem="Bi1-jq-IdQ" firstAttribute="bottom" secondItem="PLl-cJ-9cT" secondAttribute="bottom" id="GHY-Za-3kT"/>
+                            <constraint firstItem="Bi1-jq-IdQ" firstAttribute="top" secondItem="PLl-cJ-9cT" secondAttribute="top" id="O2c-oE-uNE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PLl-cJ-9cT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Review" id="pMR-Ag-cYM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhf-HG-9oF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="-224.4377811094453"/>
+        </scene>
+        <!--New Review Table View Controller-->
+        <scene sceneID="DIg-8D-2WV">
+            <objects>
+                <tableViewController id="FJU-e5-EUZ" customClass="NewReviewTableViewController" customModule="Accessibility" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8zU-ej-HDE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="SpY-4W-b0Y">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrt-IJ-Vz3">
+                                    <rect key="frame" x="16" y="55" width="343" height="110.5"/>
+                                    <string key="text">Vhista Accessibility Review is a tool that allows you to review how accessible your favorite applications are. In case of a negative review, we will try to contact the creators of the app, and hopefully they will take corrective measures. We will send to your email any updates we obtain from them. You can also see cases opened by other users or even share yours!</string>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="lrt-IJ-Vz3" firstAttribute="leading" secondItem="SpY-4W-b0Y" secondAttribute="leading" constant="16" id="OMa-eW-qd7"/>
+                                <constraint firstItem="lrt-IJ-Vz3" firstAttribute="centerY" secondItem="SpY-4W-b0Y" secondAttribute="centerY" constant="10" id="XHc-dO-UXs"/>
+                                <constraint firstAttribute="trailing" secondItem="lrt-IJ-Vz3" secondAttribute="trailing" constant="16" id="qlM-JL-ejL"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="App Information" id="K2w-z3-bks">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="Rig-8x-bV8">
+                                        <rect key="frame" x="0.0" y="255.5" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rig-8x-bV8" id="UGH-Hf-GRc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHQ-2b-4sO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGY-EA-h1X">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="NIL-8k-Aec"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey6-az-KC8">
+                                                            <rect key="frame" x="16" y="0.0" width="80.5" height="50"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzJ-4a-pU4">
+                                                            <rect key="frame" x="96.5" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="N00-dd-1cI"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="required" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoZ-dC-qLu">
+                                                            <rect key="frame" x="112.5" y="0.0" width="246.5" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <accessibility key="accessibilityConfiguration" hint="Use this text field to add the name of the app you want to review" identifier="AppNameTextField" label="Edit App Name"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" smartQuotesType="no"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                    <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="FJU-e5-EUZ" id="ztj-fk-VL6"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1K-qG-94L">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="CAs-A4-eFg"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SHQ-2b-4sO" firstAttribute="top" secondItem="UGH-Hf-GRc" secondAttribute="top" id="3Ej-lJ-9ZS"/>
+                                                <constraint firstItem="SHQ-2b-4sO" firstAttribute="leading" secondItem="UGH-Hf-GRc" secondAttribute="leading" id="E12-qW-uq9"/>
+                                                <constraint firstAttribute="trailing" secondItem="SHQ-2b-4sO" secondAttribute="trailing" id="RvY-QT-AJB"/>
+                                                <constraint firstAttribute="bottom" secondItem="SHQ-2b-4sO" secondAttribute="bottom" id="vYw-tx-Drb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160558657" green="0.089475383638043873" blue="0.090344076683073427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="cjU-Yy-FJI">
+                                        <rect key="frame" x="0.0" y="305.5" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cjU-Yy-FJI" id="W3t-2S-0E7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Zz-gE-mK5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5Y-2W-hL8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="EiN-aC-IZD"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppStore Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZJ-uT-NBV">
+                                                            <rect key="frame" x="16" y="0.0" width="108" height="50"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyb-fg-GOZ">
+                                                            <rect key="frame" x="124" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="msy-0P-5jJ"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="optional" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYP-8g-6h7">
+                                                            <rect key="frame" x="140" y="0.0" width="219" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <accessibility key="accessibilityConfiguration" hint="Use this text field to add the link of the app in the AppStore. This field is optional" identifier="AppStoreLinkTextField" label="Edit AppStore Link">
+                                                                <accessibilityTraits key="traits" none="YES"/>
+                                                            </accessibility>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartQuotesType="no" textContentType="url"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                    <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="FJU-e5-EUZ" id="33M-RK-iKe"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-fR-qW6">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="Ypq-eI-ytx"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2Zz-gE-mK5" firstAttribute="top" secondItem="W3t-2S-0E7" secondAttribute="top" id="SKq-1b-U0X"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Zz-gE-mK5" secondAttribute="trailing" id="Slw-YG-oOe"/>
+                                                <constraint firstItem="2Zz-gE-mK5" firstAttribute="leading" secondItem="W3t-2S-0E7" secondAttribute="leading" id="eKC-dg-zLW"/>
+                                                <constraint firstAttribute="bottom" secondItem="2Zz-gE-mK5" secondAttribute="bottom" id="hhG-J0-dOR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160000007" green="0.089475383640000003" blue="0.090344076679999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="App Review Information" footerTitle="This feedback will be public to other users if you decide to publicly share this review." id="rym-pF-dQX">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="6Sr-WG-EDZ">
+                                        <rect key="frame" x="0.0" y="419" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Sr-WG-EDZ" id="4M1-5S-kOF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbA-kD-JWH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTR-Tc-Ai6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="0L9-WB-7Tu"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessibility Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IY2-vj-KFS">
+                                                            <rect key="frame" x="16" y="0.0" width="148.5" height="50"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ske-vr-mKQ">
+                                                            <rect key="frame" x="164.5" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="VGm-oB-Y0t"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <slider opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="avr-nH-47K">
+                                                            <rect key="frame" x="178.5" y="0.0" width="182.5" height="51"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="AppRatingSlider" label="App accessibility rating">
+                                                                <string key="hint">Use this slider to tell us your overall rating of the app taking into account how accessible it was. 100% being the best score for an app.</string>
+                                                            </accessibility>
+                                                            <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </slider>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXc-BN-HYn">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="qpn-vZ-0Jn"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="IbA-kD-JWH" secondAttribute="bottom" id="5Wm-Fd-P37"/>
+                                                <constraint firstItem="IbA-kD-JWH" firstAttribute="leading" secondItem="4M1-5S-kOF" secondAttribute="leading" id="7Dy-zb-3Ua"/>
+                                                <constraint firstAttribute="trailing" secondItem="IbA-kD-JWH" secondAttribute="trailing" id="ORV-hq-cMl"/>
+                                                <constraint firstItem="IbA-kD-JWH" firstAttribute="top" secondItem="4M1-5S-kOF" secondAttribute="top" id="pSu-zR-ore"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160000007" green="0.089475383640000003" blue="0.090344076679999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="Ube-va-LOq">
+                                        <rect key="frame" x="0.0" y="469" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ube-va-LOq" id="1An-sw-f6h">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnl-hc-j3C">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yim-Nf-r4V">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="NHW-D7-wbB"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Positive Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhh-0h-8KL">
+                                                            <rect key="frame" x="16" y="0.0" width="139" height="50"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCN-BA-kcj">
+                                                            <rect key="frame" x="155" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="ghH-y4-uIx"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="optional" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0yU-hA-sbg">
+                                                            <rect key="frame" x="171" y="0.0" width="188" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <accessibility key="accessibilityConfiguration" hint="Use this text field to add any positive feedback you will like us to share with the developers of the app." identifier="PositiveFeedbackTextField" label="Add positive feedback">
+                                                                <accessibilityTraits key="traits" none="YES"/>
+                                                            </accessibility>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                    <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="FJU-e5-EUZ" id="HnQ-yU-Wf4"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36f-KJ-Rd2">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="W8u-G4-Ct0"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mnl-hc-j3C" firstAttribute="leading" secondItem="1An-sw-f6h" secondAttribute="leading" id="5Mw-LA-4Qg"/>
+                                                <constraint firstAttribute="bottom" secondItem="mnl-hc-j3C" secondAttribute="bottom" id="66d-4p-ibp"/>
+                                                <constraint firstItem="mnl-hc-j3C" firstAttribute="top" secondItem="1An-sw-f6h" secondAttribute="top" id="8Cz-fv-Yee"/>
+                                                <constraint firstAttribute="trailing" secondItem="mnl-hc-j3C" secondAttribute="trailing" id="SkX-TP-ioE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160000007" green="0.089475383640000003" blue="0.090344076679999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="DIU-Yu-IiY">
+                                        <rect key="frame" x="0.0" y="519" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DIU-Yu-IiY" id="Nbz-2z-tMo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nhl-A6-emq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3j-87-9mN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="yBs-Gp-Icb"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Possible Improvements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qD-cd-hEp">
+                                                            <rect key="frame" x="16" y="0.0" width="177.5" height="49.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xy2-jW-0f2">
+                                                            <rect key="frame" x="193.5" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="DnY-84-lZ6"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="optional" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Onw-0R-AAR">
+                                                            <rect key="frame" x="209.5" y="0.0" width="149.5" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="PossibleImprovementsTextField" label="Add possible improvements">
+                                                                <string key="hint">Use this text field to add any possible accessibility improvements or ideas you will like us to share with the developers of the app.</string>
+                                                                <accessibilityTraits key="traits" none="YES"/>
+                                                            </accessibility>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                    <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="FJU-e5-EUZ" id="6gj-Xz-FPh"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYc-GG-cJP">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="W9X-V0-QTG"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Nhl-A6-emq" secondAttribute="bottom" id="2c9-0a-4rk"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nhl-A6-emq" secondAttribute="trailing" id="Glb-XP-pyd"/>
+                                                <constraint firstItem="Nhl-A6-emq" firstAttribute="top" secondItem="Nbz-2z-tMo" secondAttribute="top" id="ewb-rK-xWD"/>
+                                                <constraint firstItem="Nhl-A6-emq" firstAttribute="leading" secondItem="Nbz-2z-tMo" secondAttribute="leading" id="osp-Ie-D0v"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160000007" green="0.089475383640000003" blue="0.090344076679999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="G67-fN-DXp">
+                                        <rect key="frame" x="0.0" y="569" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G67-fN-DXp" id="RJk-6n-boT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgZ-XK-YsQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-E6-uic">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="2C9-aG-Nd8"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessibility Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tB-VA-NnG">
+                                                            <rect key="frame" x="16" y="0.0" width="174.5" height="49.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcz-0p-5PZ">
+                                                            <rect key="frame" x="190.5" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="IAu-u3-53W"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="optional" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVF-6f-cgt">
+                                                            <rect key="frame" x="206.5" y="0.0" width="152.5" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="AccessibilityFeedbackTextField" label="Add accessibility feedback">
+                                                                <string key="hint">Use this text field to add any incompatibilities or issues you found while using the app with accessibility technology. We will try to reach the developers of the app and will keep you updated on any response or corrections made by them.</string>
+                                                                <accessibilityTraits key="traits" none="YES"/>
+                                                            </accessibility>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                    <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="FJU-e5-EUZ" id="pAy-Ur-cv2"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiD-af-pIt">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="t5R-6Z-ixf"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="zgZ-XK-YsQ" secondAttribute="trailing" id="Bon-Dj-NgF"/>
+                                                <constraint firstAttribute="bottom" secondItem="zgZ-XK-YsQ" secondAttribute="bottom" id="Jmn-Ef-YkN"/>
+                                                <constraint firstItem="zgZ-XK-YsQ" firstAttribute="leading" secondItem="RJk-6n-boT" secondAttribute="leading" id="bqo-ew-Bqu"/>
+                                                <constraint firstItem="zgZ-XK-YsQ" firstAttribute="top" secondItem="RJk-6n-boT" secondAttribute="top" id="kDr-zA-15b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160000007" green="0.089475383640000003" blue="0.090344076679999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Private User Information" id="Miz-BK-nNs">
+                                <string key="footerTitle">We will associate this review to your email account. Please keep in mind that your email will always remain private, and your review will be anonymous both for the other users and the developers of the reviewed app.</string>
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="w3A-A2-put">
+                                        <rect key="frame" x="0.0" y="710.5" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w3A-A2-put" id="geP-MB-9BN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRD-No-PYG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9e-8g-t7X">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="xZR-79-YzK"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yB-UJ-rlF">
+                                                            <rect key="frame" x="16" y="0.0" width="80" height="49.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOz-N9-whq">
+                                                            <rect key="frame" x="96" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="w7U-UK-XQe"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="required" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8Q-QL-vSi">
+                                                            <rect key="frame" x="112" y="0.0" width="247" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="UserEmailTextField" label="Add your email">
+                                                                <string key="hint">Use this text field to add your email account. We will use your email account to keep you updated on any updates on this review.</string>
+                                                                <accessibilityTraits key="traits" none="YES"/>
+                                                            </accessibility>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" textContentType="email"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                    <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="FJU-e5-EUZ" id="eCf-yS-Twh"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ft2-aO-0eo">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="oPH-29-78h"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="TRD-No-PYG" secondAttribute="trailing" id="FmZ-NW-CCt"/>
+                                                <constraint firstItem="TRD-No-PYG" firstAttribute="top" secondItem="geP-MB-9BN" secondAttribute="top" id="QiM-Jd-tXg"/>
+                                                <constraint firstItem="TRD-No-PYG" firstAttribute="leading" secondItem="geP-MB-9BN" secondAttribute="leading" id="aO4-8c-C7k"/>
+                                                <constraint firstAttribute="bottom" secondItem="TRD-No-PYG" secondAttribute="bottom" id="dKs-bQ-v6f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160000007" green="0.089475383640000003" blue="0.090344076679999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" footerTitle="We will send information about Vhista, Accessible Technology and so much more!" id="jb3-5y-c9j">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="nK6-IY-5bA">
+                                        <rect key="frame" x="0.0" y="856.5" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nK6-IY-5bA" id="Ewp-oe-Wlb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dy0-gM-5d5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEn-z2-QP4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="agF-Bx-rs3"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe to Newsletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAN-RL-Q7v">
+                                                            <rect key="frame" x="16" y="0.0" width="276" height="49.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9di-1b-PNQ">
+                                                            <rect key="frame" x="292" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="y8U-md-Tba"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzW-fI-YOf">
+                                                            <rect key="frame" x="308" y="0.0" width="51" height="49.5"/>
+                                                            <subviews>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjr-Qt-oLg">
+                                                                    <rect key="frame" x="1" y="9.5" width="51" height="31"/>
+                                                                    <accessibility key="accessibilityConfiguration" hint="Use this switch to subscribe or opt-out of our newsletter." label="Subscribe to our newsletter"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="49" id="AfX-we-8Od"/>
+                                                                        <constraint firstAttribute="height" constant="31" id="h2L-hy-EUk"/>
+                                                                    </constraints>
+                                                                    <color key="onTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="yjr-Qt-oLg" firstAttribute="centerY" secondItem="BzW-fI-YOf" secondAttribute="centerY" id="Hb8-JN-O8l"/>
+                                                                <constraint firstItem="yjr-Qt-oLg" firstAttribute="centerX" secondItem="BzW-fI-YOf" secondAttribute="centerX" id="XFE-mq-RwS"/>
+                                                                <constraint firstAttribute="width" constant="51" id="seC-LV-2TY"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4c-a4-PQp">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="qoK-cd-675"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="dy0-gM-5d5" secondAttribute="trailing" id="7YK-z3-p8u"/>
+                                                <constraint firstAttribute="bottom" secondItem="dy0-gM-5d5" secondAttribute="bottom" id="Gab-uA-Vmn"/>
+                                                <constraint firstItem="dy0-gM-5d5" firstAttribute="top" secondItem="Ewp-oe-Wlb" secondAttribute="top" id="MdP-JT-2pc"/>
+                                                <constraint firstItem="dy0-gM-5d5" firstAttribute="leading" secondItem="Ewp-oe-Wlb" secondAttribute="leading" id="xpV-m9-OUu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160000007" green="0.089475383640000003" blue="0.090344076679999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="i3w-4U-oGI">
+                                <string key="footerTitle">By submitting this review you confirm that you've read our Privacy Policy found at https://vhista.com and that you are aged 18 or over.</string>
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="qyL-hF-NXh">
+                                        <rect key="frame" x="0.0" y="970.5" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qyL-hF-NXh" id="hZy-ZI-7sh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSu-lp-VAi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEY-me-ZLw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="JQW-6a-811"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-3u-IPy">
+                                                            <rect key="frame" x="16" y="0.0" width="343" height="49.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <state key="normal" title="Submit Review"/>
+                                                        </button>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUX-Kv-OSL">
+                                                            <rect key="frame" x="359" y="0.0" width="16" height="49.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="61S-MW-py8"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LSu-lp-VAi" firstAttribute="leading" secondItem="hZy-ZI-7sh" secondAttribute="leading" id="0Cx-QQ-bPk"/>
+                                                <constraint firstAttribute="trailing" secondItem="LSu-lp-VAi" secondAttribute="trailing" id="Mc0-rd-fsl"/>
+                                                <constraint firstAttribute="bottom" secondItem="LSu-lp-VAi" secondAttribute="bottom" id="jIR-Qe-5lC"/>
+                                                <constraint firstItem="LSu-lp-VAi" firstAttribute="top" secondItem="hZy-ZI-7sh" secondAttribute="top" id="uNX-wA-cKz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.089909730160000007" green="0.089475383640000003" blue="0.090344076679999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="FJU-e5-EUZ" id="WKm-LN-rVk"/>
+                            <outlet property="delegate" destination="FJU-e5-EUZ" id="giP-vf-RM4"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="accessibilityFeedbackTextField" destination="sVF-6f-cgt" id="IMb-9n-IYd"/>
+                        <outlet property="accessibilityRatingSlider" destination="avr-nH-47K" id="3Rm-rP-dUf"/>
+                        <outlet property="appNameTextField" destination="HoZ-dC-qLu" id="p9b-qX-M8h"/>
+                        <outlet property="appStoreLinkTextField" destination="RYP-8g-6h7" id="6lh-Mg-kFU"/>
+                        <outlet property="coverLabel" destination="lrt-IJ-Vz3" id="jpr-CR-gOF"/>
+                        <outlet property="coverView" destination="SpY-4W-b0Y" id="m0X-2Y-lcm"/>
+                        <outlet property="emailTextField" destination="a8Q-QL-vSi" id="BWE-pw-p2f"/>
+                        <outlet property="improvementsTextField" destination="Onw-0R-AAR" id="HgM-2v-kJv"/>
+                        <outlet property="positiveFeedbackTextField" destination="0yU-hA-sbg" id="BYp-4b-8Ux"/>
+                        <outlet property="submitButton" destination="dtb-3u-IPy" id="lj1-X0-z2p"/>
+                        <outlet property="subscriptionSwitch" destination="yjr-Qt-oLg" id="ZYn-TJ-8SV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryV-KS-sq0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925.5999999999999" y="-225.78710644677662"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IdN-E1-KoF">
+            <objects>
+                <tabBarController id="T8Y-uy-Pxg" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="OSr-QI-75d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jhy-mN-Zod" kind="relationship" relationship="viewControllers" id="dJe-1J-mRt"/>
+                        <segue destination="LPA-0c-kAa" kind="relationship" relationship="viewControllers" id="7RZ-mh-el9"/>
+                        <segue destination="Yg1-nW-o9d" kind="relationship" relationship="viewControllers" id="WUT-D7-W97"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vz6-6D-ErS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="107"/>
+        </scene>
+        <!--My Cases-->
+        <scene sceneID="XDx-6b-znf">
+            <objects>
+                <viewController id="0Mw-C5-vK2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NoP-Zb-cpb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="rPX-sQ-Phy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Cases" id="MJk-94-ggL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DC1-SZ-xpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="1114.992503748126"/>
+        </scene>
+        <!--New Review-->
+        <scene sceneID="Hfp-yZ-eTm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jhy-mN-Zod" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New Review" id="Avv-dD-ioW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="iPQ-Ar-sTL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M0J-nL-zab" kind="relationship" relationship="rootViewController" id="JDO-lQ-Ou8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYt-dr-uSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="-224.4377811094453"/>
+        </scene>
+        <!--Shared Cases-->
+        <scene sceneID="aN1-NR-j3F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LPA-0c-kAa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shared Cases" id="tK4-ed-d3l"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="Ut0-j9-mED">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="z3E-hs-6se" kind="relationship" relationship="rootViewController" id="gGe-Iq-6wn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsX-KH-lU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="440.32983508245883"/>
+        </scene>
+        <!--My Cases-->
+        <scene sceneID="mgT-qS-1Hx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yg1-nW-o9d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Cases" id="iMi-Xo-TRG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="d4b-UT-sf3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Mw-C5-vK2" kind="relationship" relationship="rootViewController" id="8Em-lf-aDe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vnc-zE-hEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="1114.992503748126"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
